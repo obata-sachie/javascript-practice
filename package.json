@@ -1,0 +1,22 @@
+{
+  "name": "javascript-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obata-sachie/javascript-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obata-sachie/javascript-practice/issues"
+  },
+  "homepage": "https://github.com/obata-sachie/javascript-practice#readme",
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
+}
