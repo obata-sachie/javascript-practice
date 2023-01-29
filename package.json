@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/obata-sachie/javascript-practice/issues"
   },
-  "homepage": "https://github.com/obata-sachie/javascript-practice#readme"
+  "homepage": "https://github.com/obata-sachie/javascript-practice#readme",
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
 }
