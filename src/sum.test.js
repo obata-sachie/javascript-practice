@@ -28,7 +28,7 @@ test('letの練習', () => {
 });
 test('console.logの練習', () => {
 const total=42+42;
-console.log(total); // => 1
+console.log(total); // => 84
 const value = "値";
-console.log(value); // => ReferenceError: x is not defined
+console.log(value); 
 });
