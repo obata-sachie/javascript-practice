@@ -64,12 +64,33 @@ test('オブジェクトの練習', () => {
   expect(object.age).toBe(20);
   expect(object.hasLicense).toBe(true);
   expect(object.nested.valuea).toBe(1);
-  });
-  test('配列の練習', () => {
-    const array = ["いちご",123,true,{age:20,address:"東京"}];
-    expect(array[0]).toBe("いちご");
-    expect(array[1]).toBe(123);
-    expect(array[2]).toBe(true);
-    expect(array[3].age).toBe(20);
-    expect(array[3].address).toBe("東京"); 
-    });
+});
+test('配列の練習', () => {
+  const array = ["いちご",123,true,{age:20,address:"東京"}];
+  expect(array[0]).toBe("いちご");
+  expect(array[1]).toBe(123);
+  expect(array[2]).toBe(true);
+  expect(array[3].age).toBe(20);
+  expect(array[3].address).toBe("東京"); 
+});
+test('べき乗の練習', () => {
+  expect(3 ** 4).toBe(81); 
+  expect(Math.pow(3, 4)).toBe(81); 
+});
+test('分割代入（配列）', () => {
+  const array = [1,2,3]
+  const [a,b,c] = array
+  expect(a).toBe(1); 
+  expect(b).toBe(2);
+  expect(c).toBe(3); 
+});
+test('分割代入（オブジェクト）', () => {
+  const obj = {
+    "key1":"value1",
+    "key2":"value2"
+  };
+  const {key1,key2} = obj;
+  expect(key1).toBe("value1");
+  expect(key2).toBe("value2");
+  expect({key1,key2}).toStrictEqual(obj);
+});
