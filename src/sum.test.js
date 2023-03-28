@@ -122,3 +122,22 @@ test('暗黙的な型変換', () => {
   expect(Number.isNaN(Number.parseInt("AAA",10))).toBe(true);
 });
 
+test('functionの練習', () => {
+  function double(num) {
+    return num * 2;
+  }
+  expect(double(10)).toBe(20);
+  function echo(x) {
+    return x;
+  }
+  expect(echo(1)).toBe(1);
+  expect(echo()).toBe(undefined); 
+});
+
+test('デフォルト引数の練習', () => {
+  function addPrefix2(text, prefix = "デフォルト:") {
+    return prefix + text;
+  }
+  expect(addPrefix2("abc")).toBe("デフォルト:abc");
+  expect(addPrefix2("abc","カスタム:")).toBe("カスタム:abc");
+});
