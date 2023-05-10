@@ -252,3 +252,41 @@ test("switchの練習2", () => {
   expect(a(4)).toBe("グー");
   expect(a(5)).toBe("チョキ");
 });
+test("繰り返し処理1", () => {
+  function sum(max) {
+    let total = 0;
+    for (let i = 0; i < max; i++) {
+      total += i + 1;
+    }
+    return total;
+  }
+  expect(sum(4)).toBe(10);
+  expect(sum(10)).toBe(55);
+});
+test("繰り返し処理2", () => {
+  function sum(numbers) {
+    let total = 0;
+    for (let i = 0; i < numbers.length; i++) {
+      total += numbers[i];
+    }
+    return total;
+  }
+  expect(sum([1])).toBe(1);
+  expect(sum([])).toBe(0);
+  expect(sum([1, 2, 3])).toBe(6);
+});
+test("break文", () => {
+  function IsEvenIncluded(numbers) {
+    let IsEvenIncluded = false;
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 === 0) {
+        IsEvenIncluded = true;
+        break;
+      }
+    }
+    return IsEvenIncluded;
+  }
+  expect(IsEvenIncluded([1])).toBe(false);
+  expect(IsEvenIncluded([])).toBe(false);
+  expect(IsEvenIncluded([1, 2, 3])).toBe(true);
+});
