@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/obata-sachie/javascript-practice#readme",
   "devDependencies": {
-    "jest": "^29.4.1"
+    "jest": "^29.4.1",
+    "prettier": "2.8.8"
   }
 }
