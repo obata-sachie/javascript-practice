@@ -385,3 +385,16 @@ test("オブジェクトの練習", () => {
   //color["blue-green"]="blue-green";
   expect(color["blue-green"]).toStrictEqual("blue-green");
 });
+
+test("オブジェクトのプロパティチェック", () => {
+  const obj = {
+    one: 1,
+  };
+  expect(obj.one).toStrictEqual(1); //プロパティチェックの方法
+  expect(obj.two).toStrictEqual(undefined); //undefinedでチェックする方法
+  expect(Object.hasOwn(obj, "one")).toStrictEqual(true); //真偽値
+  expect(Object.hasOwn(obj, "two")).toStrictEqual(false); //真偽値
+  expect(Object.keys(obj)).toStrictEqual(["one"]); //Object.keysを呼び出す方法
+  expect(Object.values(obj)).toStrictEqual([1]); //Object.valuesを呼び出す方法
+  expect(Object.entries(obj)).toStrictEqual([["one", 1]]); //Object.entriesを呼び出す方法
+});
