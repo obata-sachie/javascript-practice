@@ -398,3 +398,31 @@ test("オブジェクトのプロパティチェック", () => {
   expect(Object.values(obj)).toStrictEqual([1]); //Object.valuesを呼び出す方法
   expect(Object.entries(obj)).toStrictEqual([["one", 1]]); //Object.entriesを呼び出す方法
 });
+
+test("Objectのassign/spred構文", () => {
+  const a = {
+    one: 1,
+    two: 2,
+    three: 3,
+  };
+  const b = {
+    three: 30,
+    four: 4,
+    five: 5,
+  };
+  expect(Object.assign({}, a, b)).toStrictEqual({
+    one: 1,
+    two: 2,
+    three: 30,
+    four: 4,
+    five: 5,
+  });
+  expect({ ...a, ...b, six: 6 }).toStrictEqual({
+    one: 1,
+    two: 2,
+    three: 30,
+    four: 4,
+    five: 5,
+    six: 6,
+  });
+});
