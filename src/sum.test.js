@@ -426,3 +426,37 @@ test("Objectのassign/spred構文", () => {
     six: 6,
   });
 });
+test("findIndex,find,slice,include,someの練習", () => {
+  const obj = {
+    apple: "リンゴ",
+    strawberry: "いちご",
+    orange: "オレンジ",
+  };
+  const array = ["a", "b", "c", obj];
+
+  expect(
+    array.findIndex((o) => {
+      return o.apple === "リンゴ";
+    })
+  ).toStrictEqual(3);
+  expect(
+    array.find((o) => {
+      return o.strawberry === "いちご";
+    })
+  ).toStrictEqual(obj);
+  expect(
+    array.find((o) => {
+      return false;
+    })
+  ).toStrictEqual(undefined);
+  expect(array.slice(1, 3)).toStrictEqual(["b", "c"]);
+  expect(array.slice(-1)).toStrictEqual([obj]);
+  expect(array.slice(2)).toStrictEqual(["c", obj]);
+  expect(array.slice(1, 1)).toStrictEqual([]);
+  expect(array.includes("b")).toStrictEqual(true);
+  expect(
+    array.some((o) => {
+      return o.orange === "オレンジ";
+    })
+  ).toStrictEqual(true);
+});
