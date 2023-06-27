@@ -426,3 +426,28 @@ test("Objectのassign/spred構文", () => {
     six: 6,
   });
 });
+test("配列の分割代入", () => {
+  const array = [1, 2, 3];
+  const [one, two, three] = array;
+
+  expect(array[0]).toStrictEqual(one);
+  expect(array[1]).toStrictEqual(two);
+  expect(array[2]).toStrictEqual(three);
+  expect(one).toStrictEqual(1);
+  expect(two).toStrictEqual(2);
+  expect(three).toStrictEqual(3);
+});
+test("配列からインデックスを取得", () => {
+  const array = [1, 2, 3, "red"];
+  const [one, two, three] = array;
+
+  expect(array.indexOf(0)).toStrictEqual(-1);
+  expect(array.indexOf(1)).toStrictEqual(0);
+  expect(array.indexOf("red")).toStrictEqual(3);
+
+  const obj = { blue: "青" };
+  const array1 = [1, 2, "JS", obj];
+  expect(array1.indexOf({ blue: "青" })).toStrictEqual(-1);
+  expect(array1.indexOf("JS")).toStrictEqual(2);
+  expect(array1.indexOf(obj)).toStrictEqual(3);
+});
