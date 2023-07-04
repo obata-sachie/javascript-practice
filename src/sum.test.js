@@ -485,3 +485,12 @@ test("findIndex,find,slice,include,someの練習", () => {
     })
   ).toStrictEqual(true);
 });
+test("配列のpush/concat/flatメソッド", () => {
+  const array = [];
+  array.push([1, 2, 3]);
+  expect(array).toStrictEqual([[1, 2, 3]]);
+  const newArray = array.concat([4, 5, 6]);
+  expect(array).toStrictEqual([[1, 2, 3]]);
+  expect(newArray).toStrictEqual([[1, 2, 3], 4, 5, 6]);
+  expect(newArray.flat()).toStrictEqual([1, 2, 3, 4, 5, 6]);
+});
